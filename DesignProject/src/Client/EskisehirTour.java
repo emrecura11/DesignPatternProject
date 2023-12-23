@@ -1,14 +1,12 @@
 package Client;
 
-import Client.TravelPlanner;
-
 public class EskisehirTour extends TravelPlanner {
 
     String companyName = "Unknown Company";
     public EskisehirTour(String companyName, double companyPrice){
         this.price = companyPrice;
 
-        this.setDescription(companyName + " to Eskisehir with");
+        this.getDescription(companyName + ": Antalya to Eskisehir with");
     }
     @Override
     public double price() {
@@ -17,8 +15,8 @@ public class EskisehirTour extends TravelPlanner {
 
 
     @Override
-    public void setDescription(String description) {
-        super.setDescription(description);
+    public void getDescription(String description) {
+        super.getDescription(description);
     }
 }
 

@@ -1,7 +1,5 @@
 package Client;
 
-import Client.TravelPlanner;
-
 public class DenizliTour extends TravelPlanner {
 
 
@@ -9,7 +7,7 @@ public class DenizliTour extends TravelPlanner {
     public DenizliTour(String companyName, double companyPrice){
         this.price = companyPrice;
 
-        this.setDescription(companyName + " to Denizli with");
+        this.getDescription(companyName + ": Antalya to Denizli with");
     }
     @Override
     public double price() {
@@ -18,7 +16,7 @@ public class DenizliTour extends TravelPlanner {
 
 
     @Override
-    public void setDescription(String description) {
-        super.setDescription(description);
+    public void getDescription(String description) {
+        super.getDescription(description);
     }
 }

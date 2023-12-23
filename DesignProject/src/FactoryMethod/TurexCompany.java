@@ -1,9 +1,8 @@
 package FactoryMethod;
 
 import Client.*;
-import FactoryMethod.TravelPlannerFactory;
 
-public class TurexPlanner extends TravelPlannerFactory {
+public class TurexCompany extends TravelCompanyFactory {
 
     @Override
     public TravelPlanner createCityTour(int cityNumber) {
@@ -11,7 +10,7 @@ public class TurexPlanner extends TravelPlannerFactory {
             case 1:
                 return new IstanbulTour("Turex", 500);
             case 2:
-                return new AnkaraTour("Turex",340);
+                return new NevsehirTour("Turex",340);
             case 3:
                 return new EskisehirTour("Turex", 220);
             case 4:

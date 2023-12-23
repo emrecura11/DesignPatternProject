@@ -3,7 +3,7 @@ import Client.TravelPlanner;
 
 
 // Concrete decorator class for Boat Tour
-class BoatTour extends ActivityDecorator {
+public  class BoatTour extends ActivityDecorator {
     private TravelPlanner travelPlanner;
     private double boatTourCost;
 

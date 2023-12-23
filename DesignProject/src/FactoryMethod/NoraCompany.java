@@ -3,15 +3,14 @@ package FactoryMethod;
 
 import Client.*;
 
-// Concrete Creator for ETS
-class NoraPlanner extends TravelPlannerFactory {
+public class NoraCompany extends TravelCompanyFactory {
     @Override
     public TravelPlanner createCityTour(int cityNumber) {
         switch (cityNumber) {
             case 1:
                 return new IstanbulTour("Nora", 640);
             case 2:
-                return new AnkaraTour("Nora", 300);
+                return new NevsehirTour("Nora", 300);
             case 3:
                 return new EskisehirTour("Nora", 250);
             case 4:

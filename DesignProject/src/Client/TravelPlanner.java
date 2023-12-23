@@ -14,7 +14,7 @@ public abstract class TravelPlanner {
     }
 
 
-    public void setDescription(String description) {
+    public void getDescription(String description) {
         this.description = description;
     }
 

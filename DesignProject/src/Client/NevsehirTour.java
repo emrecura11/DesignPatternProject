@@ -1,15 +1,13 @@
 package Client;
 
-public class IzmirTour extends TravelPlanner {
+public class NevsehirTour extends TravelPlanner {
 
 
     String companyName = "Unknown Company";
-    public IzmirTour(String companyName, double companyPrice){
+    public NevsehirTour(String companyName, double companyPrice){
         this.price = companyPrice;
-
-        this.getDescription(companyName + ": Antalya to Izmir with");
+        this.getDescription(companyName + ": Antalya to Nevsehir with");
     }
-
     @Override
     public double price() {
         return this.price;
@@ -19,6 +17,4 @@ public class IzmirTour extends TravelPlanner {
     public void getDescription(String description) {
         super.getDescription(description);
     }
-
-
 }
