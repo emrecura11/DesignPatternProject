@@ -19,6 +19,6 @@ public class MuseumTour extends ActivityDecorator {
 
     @Override
     public String getDescription() {
-        return travelPlanner.getDescription() + " ,Muse Tour";
+        return travelPlanner.getDescription() + ", Museum Tour";
     }
 }

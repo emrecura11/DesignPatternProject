@@ -12,7 +12,7 @@ public class PartyNight extends ActivityDecorator{
     }
     @Override
     public String getDescription() {
-        return travelPlanner.getDescription() + " ,Party Night";
+        return travelPlanner.getDescription() + ", Party Night";
     }
 
     @Override

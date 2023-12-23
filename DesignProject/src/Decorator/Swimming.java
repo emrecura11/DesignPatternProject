@@ -12,7 +12,7 @@ public class Swimming extends ActivityDecorator{
     }
     @Override
     public String getDescription() {
-        return travelPlanner.getDescription() + " ,Swimming";
+        return travelPlanner.getDescription() + ", Swimming";
     }
 
     @Override

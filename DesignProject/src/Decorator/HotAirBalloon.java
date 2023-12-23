@@ -12,7 +12,7 @@ public class HotAirBalloon extends ActivityDecorator{
     }
     @Override
     public String getDescription() {
-        return travelPlanner.getDescription() + " ,Swimming";
+        return travelPlanner.getDescription() + ", Hot Air Balloon Tour";
     }
 
     @Override
