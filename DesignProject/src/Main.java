@@ -418,36 +418,8 @@ import java.util.Scanner;
 
         }
 
-        DiscountTypes discount;
-        if (totalActivity == 0){
-            discount = new NoDiscount();
-            travelPlannerT.setDiscount(discount);
-            travelPlannerT.applyDiscount(travelPlannerT.discount,travelPlannerT.price());
-            travelPlannerN.setDiscount(discount);
-            travelPlannerN.applyDiscount(travelPlannerN.discount, travelPlannerN.price());
-
-        }else if (totalActivity ==1){
-            discount = new NoDiscount();
-            travelPlannerT.setDiscount(discount);
-            travelPlannerT.applyDiscount(travelPlannerT.discount,travelPlannerT.price());
-            discount = new FivePercentDiscount();
-            travelPlannerN.setDiscount(discount);
-            travelPlannerN.applyDiscount(travelPlannerN.discount, travelPlannerN.price());
-        }else if (totalActivity == 2){
-            discount = new FivePercentDiscount();
-            travelPlannerT.setDiscount(discount);
-            travelPlannerT.applyDiscount(travelPlannerT.discount,travelPlannerT.price());
-            discount = new TenPercentDiscount();
-            travelPlannerN.setDiscount(discount);
-            travelPlannerN.applyDiscount(travelPlannerN.discount, travelPlannerN.price());
-        }else{
-            discount = new TenPercentDiscount();
-            travelPlannerT.setDiscount(discount);
-            travelPlannerT.applyDiscount(travelPlannerT.discount,travelPlannerT.price());
-            travelPlannerN.setDiscount(discount);
-            travelPlannerN.applyDiscount(travelPlannerN.discount, travelPlannerN.price());
-        }
-
+        travelPlannerN.applyDiscount(travelPlannerN);
+        travelPlannerT.applyDiscount(travelPlannerT);
         System.out.println(travelPlannerT.getDescription());
         System.out.println("Turex price : " + travelPlannerT.price);
         System.out.println(travelPlannerN.getDescription());

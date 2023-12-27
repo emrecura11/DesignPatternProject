@@ -9,6 +9,8 @@ public class HotAirBalloon extends ActivityDecorator{
     public HotAirBalloon(TravelPlanner travelPlanner, double hotAirBalloonPrice) {
         this.travelPlanner = travelPlanner;
         this.hotAirBalloonPrice = hotAirBalloonPrice;
+        setDiscount(travelPlanner.discount);
+
     }
     @Override
     public String getDescription() {

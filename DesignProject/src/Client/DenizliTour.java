@@ -1,5 +1,7 @@
 package Client;
 
+import Strategy.NoDiscount;
+
 public class DenizliTour extends TravelPlanner {
 
 
@@ -7,7 +9,9 @@ public class DenizliTour extends TravelPlanner {
     public DenizliTour(String companyName, double companyPrice){
         this.price = companyPrice;
 
-        this.getDescription(companyName + ": Antalya to Denizli with");
+        this.getDescription("Your travel plan has been created with a 0% discount.\n"+companyName + ": Antalya to Denizli with");
+        setDiscount(new NoDiscount());
+
     }
     @Override
     public double price() {

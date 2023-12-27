@@ -9,6 +9,8 @@ public class PartyNight extends ActivityDecorator{
     public PartyNight(TravelPlanner travelPlanner, double partNightPrice) {
         this.travelPlanner = travelPlanner;
         this.partNightPrice = partNightPrice;
+        setDiscount(travelPlanner.discount);
+
     }
     @Override
     public String getDescription() {

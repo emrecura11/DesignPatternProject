@@ -9,6 +9,8 @@ public class Swimming extends ActivityDecorator{
     public Swimming(TravelPlanner travelPlanner, double swimmingPrice) {
         this.travelPlanner = travelPlanner;
         this.swimmingPrice = swimmingPrice;
+        setDiscount(travelPlanner.discount);
+
     }
     @Override
     public String getDescription() {

@@ -10,6 +10,8 @@ public  class BoatTour extends ActivityDecorator {
     public BoatTour(TravelPlanner travelPlanner, double boatTourCost) {
         this.travelPlanner = travelPlanner;
         this.boatTourCost = boatTourCost;
+        setDiscount(travelPlanner.discount);
+
     }
 
     @Override

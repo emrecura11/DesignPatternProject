@@ -26,8 +26,8 @@ public abstract class TravelPlanner {
         return discount;
     }
 
-    public  void applyDiscount(DiscountTypes discount, double price){
-        this.price = discount.discount(price);
+    public  void applyDiscount(TravelPlanner travelPlanner){
+        this.price = this.discount.discount(travelPlanner.price());
     }
 
     public void setDiscount(DiscountTypes discount) {

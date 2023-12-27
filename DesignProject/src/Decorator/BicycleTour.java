@@ -10,6 +10,7 @@ public class BicycleTour extends ActivityDecorator{
     public BicycleTour(TravelPlanner travelPlanner, double bicycleTourPrice) {
         this.travelPlanner = travelPlanner;
         this.bicycleTourPrice = bicycleTourPrice;
+        setDiscount(travelPlanner.discount);
     }
     @Override
     public String getDescription() {

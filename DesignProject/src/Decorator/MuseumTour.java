@@ -9,6 +9,7 @@ public class MuseumTour extends ActivityDecorator {
     public MuseumTour(TravelPlanner travelPlanner, double museTourCost) {
         this.travelPlanner = travelPlanner;
         this.museTourPrice = museTourCost;
+        setDiscount(travelPlanner.discount);
     }
 
     @Override

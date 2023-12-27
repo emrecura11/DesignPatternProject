@@ -1,5 +1,8 @@
 package Client;
 
+import Strategy.FivePercentDiscount;
+import Strategy.TenPercentDiscount;
+
 public class IzmirTour extends TravelPlanner {
 
 
@@ -7,7 +10,10 @@ public class IzmirTour extends TravelPlanner {
     public IzmirTour(String companyName, double companyPrice){
         this.price = companyPrice;
 
-        this.getDescription(companyName + ": Antalya to Izmir with");
+        this.getDescription("Your travel plan has been created with a 10% discount.\n"+companyName + ": Antalya to Izmir with");
+        setDiscount(new TenPercentDiscount());
+
+
     }
 
     @Override
