@@ -11,7 +11,7 @@ public class IstanbulTour extends TravelPlanner {
     public IstanbulTour(String companyName, double companyPrice){
         this.price = companyPrice;
 
-        this.getDescription("Your travel plan has been created with a 5% discount.\n"+companyName + ": Antalya to Istanbul with");
+        this.getDescription("Your travel plan has been created with a 5% discount.\n"+companyName + ": from Antalya to Istanbul with");
         setDiscount(new FivePercentDiscount());
 
     }

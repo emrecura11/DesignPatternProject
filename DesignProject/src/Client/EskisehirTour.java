@@ -10,7 +10,7 @@ public class EskisehirTour extends TravelPlanner {
     public EskisehirTour(String companyName, double companyPrice){
         this.price = companyPrice;
 
-        this.getDescription("Your travel plan has been created with a 0% discount.\n"+companyName + ": Antalya to Eskisehir with");
+        this.getDescription("Your travel plan has been created with a 0% discount.\n"+companyName + ": from Antalya to Eskisehir with");
         setDiscount(new NoDiscount());
 
     }

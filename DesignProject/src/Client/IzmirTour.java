@@ -10,7 +10,7 @@ public class IzmirTour extends TravelPlanner {
     public IzmirTour(String companyName, double companyPrice){
         this.price = companyPrice;
 
-        this.getDescription("Your travel plan has been created with a 10% discount.\n"+companyName + ": Antalya to Izmir with");
+        this.getDescription("Your travel plan has been created with a 10% discount.\n"+companyName + ": from Antalya to Izmir with");
         setDiscount(new TenPercentDiscount());
 
 
