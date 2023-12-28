@@ -21,8 +21,8 @@ public  class BoatTour extends ActivityDecorator {
 
 
     @Override
-    public String getDescription() {
-        return travelPlanner.getDescription() + ", Boat Tour";
+    public String setDescription() {
+        return travelPlanner.setDescription() + ", Boat Tour";
     }
 
 

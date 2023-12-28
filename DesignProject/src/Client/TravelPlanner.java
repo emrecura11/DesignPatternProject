@@ -9,12 +9,12 @@ public abstract class TravelPlanner {
     public double price;
 
 
-    public String getDescription() {
+    public String setDescription() {
         return description;
     }
 
 
-    public void getDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 

@@ -3,10 +3,6 @@ import Decorator.*;
 import FactoryMethod.NoraCompany;
 import FactoryMethod.TravelCompanyFactory;
 import FactoryMethod.TurexCompany;
-import Strategy.DiscountTypes;
-import Strategy.FivePercentDiscount;
-import Strategy.NoDiscount;
-import Strategy.TenPercentDiscount;
 
 import java.util.Scanner;
 
@@ -14,7 +10,6 @@ import java.util.Scanner;
     public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int totalActivity = 0;
         int city = 0;
 
         TravelCompanyFactory turex = new TurexCompany();
@@ -37,30 +32,28 @@ import java.util.Scanner;
             System.out.println("Please enter true city number!");
         }
     }
+        double firstPriceTurex = travelPlannerT.price();
+        double firstPriceNore = travelPlannerN.price();
         if (city == 1){
             while (true) {
-                System.out.println("Would you like to join a Boat Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Boat Tour during your trip with extra 180TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                       totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
                 }else{
-                    travelPlannerT = museumTourActivity(travelPlannerT, answer);
-                    travelPlannerN = museumTourActivity(travelPlannerN, answer);
+                    travelPlannerT = boatTourActivity(travelPlannerT, answer);
+                    travelPlannerN = boatTourActivity(travelPlannerN, answer);
                     break;
                 }
             }
 
             while (true) {
 
-                System.out.println("Would you like to join a Museum Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Museum Tour during your trip with extra 150TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -72,11 +65,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Party during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Party during your trip with extra 100TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -88,11 +79,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Swimming Activity during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Swimming Activity during your trip with extra 75TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -104,11 +93,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Bicycle Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Bicycle Tour during your trip with extra 100TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -124,11 +111,9 @@ import java.util.Scanner;
 
             while (true) {
 
-                System.out.println("Would you like to join a Bicycle Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Bicycle Tour during your trip with extra 100TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -140,11 +125,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Party during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Party during your trip with extra 100TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -156,11 +139,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Swimming Activity during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Swimming Activity during your trip with extra 75TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -172,11 +153,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Museum Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Museum Tour during your trip with extra 150TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -188,11 +167,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Hot Air Balloon Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Hot Air Balloon Tour during your trip with extra 400TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -206,11 +183,9 @@ import java.util.Scanner;
 
             while (true) {
 
-                System.out.println("Would you like to join a Bicycle Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Bicycle Tour during your trip with extra 100TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -222,11 +197,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Party during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Party during your trip with extra 100TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -238,11 +211,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Swimming Activity during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Swimming Activity during your trip with extra 75TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -254,11 +225,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Museum Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Museum Tour during your trip with extra 150TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -270,11 +239,9 @@ import java.util.Scanner;
             }
         }else if (city==4){
             while (true) {
-                System.out.println("Would you like to join a Bicycle Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Bicycle Tour during your trip with extra 100TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -287,11 +254,9 @@ import java.util.Scanner;
 
             while (true) {
 
-                System.out.println("Would you like to join a Museum Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Museum Tour during your trip with extra 150TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -303,11 +268,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Party during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Party during your trip with extra 100TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -319,11 +282,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Swimming Activity during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Swimming Activity during your trip with extra 75TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -336,11 +297,9 @@ import java.util.Scanner;
 
         }else if(city == 5){
             while (true) {
-                System.out.println("Would you like to join a Boat Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Boat Tour during your trip with extra 180TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -353,11 +312,9 @@ import java.util.Scanner;
 
             while (true) {
 
-                System.out.println("Would you like to join a Museum Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Museum Tour during your trip with extra 150TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -369,11 +326,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Party during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Party during your trip with extra 100TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -385,11 +340,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Swimming Activity during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Swimming Activity during your trip with extra 75TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -401,11 +354,9 @@ import java.util.Scanner;
             }
             while (true) {
 
-                System.out.println("Would you like to join a Bicycle Tour during your trip? \n 1- Yes \n 0- No");
+                System.out.println("Would you like to join a Bicycle Tour during your trip with extra 100TL? \n 1- Yes \n 0- No");
                 int answer = scanner.nextInt();
-                if (answer == 1){
-                    totalActivity++;
-                }
+
                 if (answer != 1 && answer != 0) {
                     System.out.println("Please enter valid number!");
 
@@ -417,13 +368,21 @@ import java.util.Scanner;
             }
 
         }
+        double a = travelPlannerT.price();
+
+        double b= travelPlannerN.price();
 
         travelPlannerN.applyDiscount(travelPlannerN);
         travelPlannerT.applyDiscount(travelPlannerT);
-        System.out.println(travelPlannerT.getDescription());
-        System.out.println("Turex price : " + travelPlannerT.price);
-        System.out.println(travelPlannerN.getDescription());
-        System.out.println("Nora price : " + travelPlannerN.price);
+        System.out.println(travelPlannerT.setDescription());
+        System.out.println("Initial Turex Price : " + firstPriceTurex);
+        System.out.println("Turex price with activity addition : "+a);
+        System.out.println("Turex price after discount : " + travelPlannerT.price);
+        System.out.println(travelPlannerN.setDescription());
+        System.out.println("Initial Nora Price : " + firstPriceNore);
+
+        System.out.println("Nora price with activity addition : "+b);
+        System.out.println("Nora price after discount: " + travelPlannerN.price);
 
 
     }

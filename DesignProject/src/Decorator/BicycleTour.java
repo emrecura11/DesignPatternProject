@@ -13,8 +13,8 @@ public class BicycleTour extends ActivityDecorator{
         setDiscount(travelPlanner.discount);
     }
     @Override
-    public String getDescription() {
-        return travelPlanner.getDescription() + ", Bicycle Tour";
+    public String setDescription() {
+        return travelPlanner.setDescription() + ", Bicycle Tour";
     }
 
     @Override

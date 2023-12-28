@@ -1,8 +1,6 @@
 package Client;
 
-import Strategy.FivePercentDiscount;
 import Strategy.NoDiscount;
-import Strategy.TenPercentDiscount;
 
 public class EskisehirTour extends TravelPlanner {
 
@@ -10,7 +8,7 @@ public class EskisehirTour extends TravelPlanner {
     public EskisehirTour(String companyName, double companyPrice){
         this.price = companyPrice;
 
-        this.getDescription("Your travel plan has been created with a 0% discount.\n"+companyName + ": from Antalya to Eskisehir with");
+        this.setDescription("Your travel plan has been created with a 0% discount.\n"+companyName + ": from Antalya to Eskisehir with");
         setDiscount(new NoDiscount());
 
     }
@@ -21,8 +19,8 @@ public class EskisehirTour extends TravelPlanner {
 
 
     @Override
-    public void getDescription(String description) {
-        super.getDescription(description);
+    public void setDescription(String description) {
+        super.setDescription(description);
     }
 }
 
